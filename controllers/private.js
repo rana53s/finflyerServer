@@ -9,7 +9,7 @@ exports.getPrivateData = (req, res, next) => {
 exports.affilatelist = async (req, res, next) => {
     const { type } = req.params;
     try {
-        const affilate = await Affiliate.findUser({ type });
+        const affilate = await Affiliate.findOne({ type });
         res.status(201).json({
             success: true,
             data: affilate

@@ -5,7 +5,7 @@ const AffiliateSchema = new mongoose.Schema({
     description: {type: String, required: [false, 'Please Provide Affiliate Description'] },
     link: {type: String, required: [true, 'Please Provide Affiliate Link'] },
     whatsappUrl: {type: String, required: [false, 'Please Provide Affiliate Whatsapp Url'] },
-    type: {type: String, enum:['bank','demat'], default:'bank', required: [true, 'Please Provide Affiliate Type'] },
+    type: {type: String, enum:['finance','product'], default:'finance', required: [true, 'Please Provide Affiliate Type'] },
     catagory: {type: String, required: [false, 'Please Provide Affiliate Catagory'] },
     campaignType: {type: String, required: [false, 'Please Provide Affiliate Campaign Type'] },
     payment: {type: String, required: [false, 'Please Provide Affiliate Payment'] },
