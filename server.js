@@ -1,9 +1,8 @@
-require('dotenv').config({ path: './config.env' });
+require('dotenv').config({ path: './.env' });
 const express = require('express');
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/error');
 const cors = require('cors');
-
 
 
 // Connect Database Connection

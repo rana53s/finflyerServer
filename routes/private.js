@@ -4,9 +4,9 @@ const {getPrivateData, affilatelist, workentry, worklist} = require('../controll
 const {protect} = require('../middleware/auth');
 
 router.route('/').get(protect, getPrivateData);
-router.route('/affilate/:type').get(affilatelist);
-router.route('/workentry').post(workentry);
-router.route('/worklist').post(worklist);
+router.route('/affilate/:type').get(protect, affilatelist);
+router.route('/workentry').post(protect, workentry);
+router.route('/worklist').post(protect, worklist);
 
 
 module.exports = router;
